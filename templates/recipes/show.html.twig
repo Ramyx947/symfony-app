@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="ingredients">
+    <h2> INGREDIENTS <h2>
+    <p>
+        1 tbsp olive or rapeseed oil<br>
+        1 onion, finely chopped <br>
+        3 garlic cloves, sliced<br>
+        1 tsp smoked paprika <br>
+        1/2 tsp cumin<br>
+        1 tbsp dried thyme<br>
+        3 medium carrots, sliced(about 200g) <br>
+        1 red pepper, chopped<br>
+        1 yellow pepper, chooped <br>
+        2 x 400g tins tomatoes or peeled cherry tomatos <br>
+        250ml vegetable stock cube (we used 1 Knorr vegetable stock pot) <br>
+        2 courgettes, sliced thickly (about 300g) <br>
+        2 spring fresh thype <br>
+        250g cooked lentils (we used Merchant Gourmet ready-to-eat Puy lentils) <br>
+    </p>
+</div>
+<div class="recipe-image">
+        <img src="{{ asset('build/images/vegetarian_casserole.png')}}"/>
+</div>
+<div class="method">
+    <h2> METHOD <h2>
+    <p> 
+        <ol>
+            <li> Heat the oil in a large, heavy-based pan.</li>
+            <li><bold> Add the onions and cook gently for 5-10 mins until softened. </bold></li>
+            <li> Add the garlic, spices, dried thyme, carrots, celery and peppers and cook for 5 minutes.</li>
+            <li> <bold>Add the tomatoes, stock, courgettes and fresh thyme and cook for 20-25 minutes.</bold></li>
+            <li> Take out the thyme springs.</li>
+            <li> <bold> Stir in the lentils and bring back to a simmer. </bold></li>
+            <li> Serve with wild and white basmati rice, mash or quinoa.</li>
+        </ol>
+    </p>
+</div>
+
+<div class="comments">
+<h2> Comments </h2>
+    <p> {% for comment in comments %} 
+            {{ comment}} <br>
+
+    {% endfor %}
+    </p>
+</div>
+{% endblock %}
