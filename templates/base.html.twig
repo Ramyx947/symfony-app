@@ -5,9 +5,11 @@
         <meta charset="UTF-8">
         <title>{% block title %}Monocle Recipes{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-            <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="/public/build/fonts/HelveticaNeue-Bold.otf"
+            <link rel="stylesheet" href="/public/build/fonts/HelveticaNeue-Roman.otf"
+            <link rel="stylesheet" href="/public/build/fonts/PlantinMTStd-BoldCondensed.otf"
+            <link rel="stylesheet" href="/public/build/fonts/PlantinMTStd-Regular.otf"
         {% endblock %}
     </head>
     <body>
@@ -18,12 +20,28 @@
     </div>
     <div id="content">
 
-        {% block body %}{% endblock %}
+        {% block body %}
+    <div id="ingredients">
+        <h1> Ingredients </h1>
+    </div>
+    <div id="method">
+
+        <h1> Method </h1>
+    </div>
+    <div id="form">
+
+        {{ form(form) }}
+    </div>
+    <div id="comments">
+
+        <h1> Comments </h1>
+    </div>
+
+        {% endblock %}
 
     </div>
         {% block javascripts %}
-            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </body>
 </html>
