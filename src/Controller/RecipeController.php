@@ -38,5 +38,11 @@ class RecipeController extends AbstractController
             // data is an array with "name", "email", and "message" keys
             $data = $form->getData();
         }
+
     }
+    public function showAction() {
+
+        return new Response("This will be options page:");
+    }
+    
 }

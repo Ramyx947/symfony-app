@@ -26,14 +26,7 @@
             <div id="comments">
                 {% block comments %} {% endblock %}
             </div>
-
-            <div id="comment_form">
-                {% block form %} 
-                    
-                {% endblock %}
-             </div>
             {% endblock %}
-
 
             {% block javascripts %}
                 {{ encore_entry_script_tags('app') }}
