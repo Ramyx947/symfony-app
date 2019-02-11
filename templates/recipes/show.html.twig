@@ -1,39 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="recipe-image">
+    <div class="recipe-image">
         <img src="{{ asset('build/images/vegetarian_casserole.png')}}"/>
-</div>
-<div class="recipe-content">
-    <h2> INGREDIENTS </h2>
-    <p>
-        1 tbsp olive or rapeseed oil<br>
-        1 onion, finely chopped <br>
-        3 garlic cloves, sliced<br>
-        1 tsp smoked paprika <br>
-        1/2 tsp cumin<br>
-        1 tbsp dried thyme<br>
-        3 medium carrots, sliced(about 200g) <br>
-        1 red pepper, chopped<br>
-        1 yellow pepper, chooped <br>
-        2 x 400g tins tomatoes or peeled cherry tomatos <br>
-        250ml vegetable stock cube (we used 1 Knorr vegetable stock pot) <br>
-        2 courgettes, sliced thickly (about 300g) <br>
-        2 spring fresh thype <br>
-    </p>
+    </div>
+    <div class="recipe-content">
+        <h2> INGREDIENTS </h2>
+        <p>
+            1 tbsp olive or rapeseed oil<br>
+            1 onion, finely chopped <br>
+            3 garlic cloves, sliced<br>
+            1 tsp smoked paprika <br>
+            1/2 tsp cumin<br>
+            1 tbsp dried thyme<br>
+            3 medium carrots, sliced(about 200g) <br>
+            1 red pepper, chopped<br>
+            1 yellow pepper, chooped <br>
+            2 x 400g tins tomatoes or peeled cherry tomatos <br>
+            250ml vegetable stock cube (we used 1 Knorr vegetable stock pot) <br>
+            2 courgettes, sliced thickly (about 300g) <br>
+            2 spring fresh thype <br>
+        </p>
 
-    <h2> METHOD </h2>
-    <p> 
-        <ol>
-            <li> Heat the oil in a large, heavy-based pan.</li>
-            <li> Add the onions and cook gently for 5-10 mins until softened.</li>
-            <li> Add the garlic, spices, dried thyme, carrots, celery and peppers and cook for 5 minutes.</li>
-            <li> Add the tomatoes, stock, courgettes and fresh thyme and cook for 20-25 minutes.</li>
-            <li> Take out the thyme springs.</li>
-            <li> Stir in the lentils and bring back to a simmer. </li>
-            <li> Serve with wild and white basmati rice, mash or quinoa.</li>
-        </ol>
-    </p>
-</div>
+        <h2> METHOD </h2>
+        <p> 
+            <ol>
+                <li> Heat the oil in a large, heavy-based pan.</li>
+                <li> Add the onions and cook gently for 5-10 mins until softened.</li>
+                <li> Add the garlic, spices, dried thyme, carrots, celery and peppers and cook for 5 minutes.</li>
+                <li> Add the tomatoes, stock, courgettes and fresh thyme and cook for 20-25 minutes.</li>
+                <li> Take out the thyme springs.</li>
+                <li> Stir in the lentils and bring back to a simmer. </li>
+                <li> Serve with wild and white basmati rice, mash or quinoa.</li>
+            </ol>
+        </p>
+    </div>
 
+    {% block form %}  
+      
+    {% endblock %}
+
+    {% block comments %}
+        <div class="comments">
+        <hr>
+            <p class="name">Lorem Name</p>
+            <p class="email">lorem@ipsum.com</p>
+            <p class="comment">Praesent commodo cursus magna, vel scelerisque nisi consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis,est non commodo luctus, nisi erat porttitor ligula,eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <hr>
+            <p class="name">Lorem Name</p>
+            <p class="email">lorem@ipsum.com</p>
+            <p class="comment">Sed accumsan elementum eleifend. Suspendisse tristique, nulla sed porttitor tincidunt, nisl justo porta nulla, quis consequat lacus quis libero. Donec tempus pharetra velit eu dictum. Donec ullamcorper lorem id ante pretium id auctor arcu pretium. Sed viverra mi ut ligula pallentesque ultricies. Morbi feugiat saggittis lacus in fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per incetos himenaeos. Etiam convallis molestieeros, vitae blandit nulla ornare vel. Sed elementum magna sit amet velit ullamcorper vestibulum.</p>
+        </div>
+    {% endblock %}
 {% endblock %}

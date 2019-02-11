@@ -2,8 +2,10 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Monocle Recipes{% endblock %}</title>
+    </head>
+    <body>
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
             <link rel="stylesheet" href="/public/build/fonts/HelveticaNeue-Bold.otf"
@@ -11,37 +13,30 @@
             <link rel="stylesheet" href="/public/build/fonts/PlantinMTStd-BoldCondensed.otf"
             <link rel="stylesheet" href="/public/build/fonts/PlantinMTStd-Regular.otf"
         {% endblock %}
-    </head>
-    <body>
-    <div id="header">
-        {% block header %}
-        <img src="{{ asset('build/images/header.png')}}"/>
-        {% endblock %}
-    </div>
-    <div id="content">
+  
+            {% block header %}
+            <div class="header_image">
+                <img src="{{ asset('build/images/header.png')}}"/>
+            </div>
+            {% endblock %}
+        
 
-        {% block body %}
-    <div id="ingredients">
-        <h1> Ingredients </h1>
-    </div>
-    <div id="method">
+            {% block body %} 
+            
+            <div id="comments">
+                {% block comments %} {% endblock %}
+            </div>
 
-        <h1> Method </h1>
-    </div>
-    <div id="form">
+            <div id="comment_form">
+                {% block form %} 
+                    
+                {% endblock %}
+             </div>
+            {% endblock %}
 
-        {{ form(form) }}
-    </div>
-    <div id="comments">
 
-        <h1> Comments </h1>
-    </div>
-
-        {% endblock %}
-
-    </div>
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+            {% block javascripts %}
+                {{ encore_entry_script_tags('app') }}
+            {% endblock %}
     </body>
 </html>
