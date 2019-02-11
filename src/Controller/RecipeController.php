@@ -20,17 +20,8 @@ class RecipeController extends AbstractController
     public function show($slug)
     {
         return $this->render('recipes/show.html.twig');
-        }
+    }
 
-    // public function index()
-    // {
-    //     $form = $this->createForm(Comment::class);
-
-    //     return $this->render('comment/index.html.twig', [
-    //         'comment_form'=>$form,
-    //         'commment_form'=>$form->createView(),
-    //     ]);
-    // }
     public function contact(Request $request)
     {
         $defaultData = ['comment' => 'Type your message here'];

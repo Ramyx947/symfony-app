@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Entity;
-// use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class Comment
 {
+    /**
+     * @Assert\NotBlank
+     */
 
     protected $comment;
     protected $name;
